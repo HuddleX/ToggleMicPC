@@ -63,9 +63,9 @@ namespace Sakuraa_ToggleMicPC
 
         void Update()
 		{
-            if (Keyboard.current.vKey.wasPressedThisFrame)
+            if (Keyboard.current.tKey.wasPressedThisFrame)
             {
-                Debug.Log("V was pressed");
+                Debug.Log("T was pressed");
                 // Call the OnVoiceToggle method to toggle the pttType property
                 OnVoiceToggle();
             }
