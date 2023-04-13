@@ -38,7 +38,6 @@ namespace Sakuraa_ToggleMicPC
             // Check if GorillaComputer is found in the scene
             if (GorillaComputer != null)
             {
-                // Set pttType property to "TRUE"
                 GorillaComputer.GetComponent<GorillaNetworking.GorillaComputer>().pttType = "ALL CHAT";
                 Debug.Log("Push to talk: ALL CHAT");
             }
