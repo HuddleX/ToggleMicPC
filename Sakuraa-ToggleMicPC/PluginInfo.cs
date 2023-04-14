@@ -7,6 +7,6 @@
 	{
 		public const string GUID = "com.sakuraa.gorillatag.sakuraa-togglemicpc";
 		public const string Name = "Sakuraa_ToggleMicPC";
-		public const string Version = "1.1";
+		public const string Version = "1.2";
 	}
 }

@@ -68,6 +68,21 @@ namespace Sakuraa_ToggleMicPC
                 // Call the OnVoiceToggle method to toggle the pttType property
                 OnVoiceToggle();
             }
+
+            // set the mic to to active if the pttType is set to ALL CHAT
+            if (GorillaComputer != null)
+            {
+                if (GorillaComputer.GetComponent<GorillaNetworking.GorillaComputer>().pttType == "ALL CHAT")
+                {
+                    text.text = "Mic active";
+                    text.color = Color.green;
+                }
+                else
+                {
+                    text.text = "Mic Muted";
+                    text.color = Color.red;
+                }
+            }
         }
 
         void OnVoiceToggle()
