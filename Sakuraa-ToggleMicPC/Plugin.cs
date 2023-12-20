@@ -11,8 +11,8 @@ namespace Sakuraa_ToggleMicPC
 	[BepInPlugin(PluginInfo.GUID, PluginInfo.Name, PluginInfo.Version)]
 	public class Plugin : BaseUnityPlugin
 	{
-        public Text text; // Text component to display the text on the screen
-        private bool ispttType = true; // Initial value is set to true
+        public Text text;
+        private bool ispttType = true;
         private GameObject GorillaComputer;
 
         void Start()
@@ -32,10 +32,8 @@ namespace Sakuraa_ToggleMicPC
 
 		void OnGameInitialized(object sender, EventArgs e)
 		{
-            // Get the GorillaComputer GameObject by finding it in the scene
             GorillaComputer = GameObject.Find("GorillaComputer");
 
-            // Check if GorillaComputer is found in the scene
             if (GorillaComputer != null)
             {
                 GorillaComputer.GetComponent<GorillaNetworking.GorillaComputer>().pttType = "ALL CHAT";
@@ -65,11 +63,9 @@ namespace Sakuraa_ToggleMicPC
             if (Keyboard.current.tKey.wasPressedThisFrame)
             {
                 Debug.Log("T was pressed");
-                // Call the OnVoiceToggle method to toggle the pttType property
                 OnVoiceToggle();
             }
 
-            // set the mic to to active if the pttType is set to ALL CHAT
             if (GorillaComputer != null)
             {
                 if (GorillaComputer.GetComponent<GorillaNetworking.GorillaComputer>().pttType == "ALL CHAT")
@@ -89,7 +85,6 @@ namespace Sakuraa_ToggleMicPC
         {
             ispttType = !ispttType;
 
-            // Update the pttType property of GorillaComputer based on the toggle value
             if (GorillaComputer != null)
             {
                 GorillaComputer.GetComponent<GorillaNetworking.GorillaComputer>().pttType = ispttType ? "ALL CHAT" : "PUSH TO TALK";
