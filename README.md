@@ -4,4 +4,3 @@ Toggle your mic on PC by pressing `T`, text should say in the bottom right sayin
 ![GitHub all releases](https://img.shields.io/github/downloads/SakuraaDevelopment/ToggleMicPC/total?style=plastic)
  
  # Toggle Mic with `T`
-[https://img.shields.io/github/downloads/SakuraaDevelopment/ToggleMicPC/total]
